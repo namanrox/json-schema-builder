@@ -59,7 +59,7 @@ const FieldEditor: React.FC<FieldEditorProps> = ({ field, onChange, onRemove }) 
                     onClick={() =>
                         onChange({
                             ...field,
-                            nestedFields: [...field.nestedFields!, { name: "", type: "string" }],
+                            nestedFields: [...field.nestedFields!, { id: "", name: "", type: "string" }],
                         })
                     }
                 >
