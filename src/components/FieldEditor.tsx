@@ -26,7 +26,7 @@ const FieldEditor: React.FC<FieldEditorProps> = ({ field, onChange, onRemove }) 
             <Select
                 value={field.type}
                 onChange={value => {
-                    if (value === "nested") onChange({ ...field, type: value, nestedFields: [{ name: "", type: "string" }] });
+                    if (value === "nested") onChange({ ...field, type: value, nestedFields: [{ id: Date.now() + Math.random(), name: "", type: "string" }] });
                     else onChange({ ...field, type: value, nestedFields: undefined });
                 }}
                 options={typeOptions}
