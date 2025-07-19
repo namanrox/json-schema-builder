@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# JSON Schema Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic React-based web application that allows users to visually create and preview JSON schemas through an intuitive form interface. Built with TypeScript and Ant Design, this tool enables the creation of deeply nested schemas with instant form previews and schema outputs.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* ✅ Add/edit/remove fields dynamically
+* 🔁 Support for nested fields (recursive structure)
+* 📦 Real-time JSON schema preview
+* 🧪 Sample form auto-generated based on the current schema
+* 🧼 Form submission and reset functionality
+* ⚛️ Built with React + TypeScript + React Hook Form
+* 🎨 UI components powered by Ant Design
 
-## Expanding the ESLint configuration
+## 📸 Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Experience the live demo of the application on Vercel: [JSON Schema Builder](https://json-schema-builder-s54m.vercel.app/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<img width="1336" height="612" alt="image" src="https://github.com/user-attachments/assets/0c02096f-f533-4fa8-b9bf-23c19330b452" />
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+* On clicking the ``Submit`` button:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<img width="568" height="337" alt="image" src="https://github.com/user-attachments/assets/462743af-1fce-4c9a-9465-e4374f85968d" />
+
+---
+
+## 🧰 Tech Stack
+
+* **React** (with TypeScript)
+* **React Hook Form** – for managing form state
+* **Ant Design** – for sleek UI components
+* **Vite** (assumed build tool)
+
+---
+
+## 🧑‍💻 Getting Started
+
+### Prerequisites
+
+* Node.js ≥ 14
+* npm or yarn
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/namanrox/json-schema-builder.git
+cd json-schema-builder
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173` to open the app.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📤 Usage
+
+1. Click `+ Add Field` to add a new field.
+2. Enter the **field name** and select its **type** (`string`, `number`, or `nested`).
+3. For nested types, you can further add inner fields.
+4. Fill out the preview form and click `Submit` to view formatted form data.
+5. You can also reset the sample input fields by clicking on the ``Reset`` button.
+6. View the generated JSON schema on the right panel.
